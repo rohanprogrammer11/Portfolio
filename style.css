@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #1e1b4b, #4c1d95);
+  color: white;
+}
+
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: -10px;
+  color: #ddd;
+  letter-spacing: 1px;
+}
+
+
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Download Resume & Contact Me button animations */
+.btn.resume, 
+.btn.contact {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: grow + glow */
+.btn.resume:hover,
+.btn.contact:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Click effect: shrink */
+.btn.resume:active,
+.btn.contact:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  background: #4f46e5;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #4338ca;
+}
+
+.contact-options {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-options a {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.8rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.contact-options a:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+
+.contact-options.hidden {
+  display: none;
+}
+
+.hero-img {
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.hero-img {
+  width: 500px;   /* adjust size */
+  height: 500px;  /* keep equal for circle */
+  object-fit: cover; /* ensures the image fills without distortion */
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+
+.about, .skills, .projects {
+  padding: 3rem 2rem;
+}
+
+.about-box, .skill-card, .project-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-top: 1rem;
+}
+
+.skills-grid, .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Animation base */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-box:hover,
+.skill-card:hover,
+.project-card:hover {
+  animation: pulse 0.4s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always 3 projects in one row */
+  gap: 1.5rem;
+}
+
+
+
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  opacity: 0.7;
+}
