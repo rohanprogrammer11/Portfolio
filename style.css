@@ -1,252 +1,278 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom right, #1e1b4b, #4c1d95);
-  color: white;
+/* ===============================
+GLOBAL STYLES
+=============================== */
+
+body{
+margin:0;
+font-family:"Segoe UI",Arial,sans-serif;
+background:linear-gradient(135deg,#0f172a,#312e81);
+color:#f1f5f9;
 }
 
-
-@keyframes gradient-move {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+html{
+scroll-behavior:smooth;
 }
 
-.subtitle {
-  font-size: 1.2rem;
-  margin-top: -10px;
-  color: #ddd;
-  letter-spacing: 1px;
+/* ===============================
+HERO SECTION
+=============================== */
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:4rem 2rem;
+gap:2rem;
 }
 
-
-
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4rem 2rem;
-  
+.hero-text h2{
+font-size:2.5rem;
+margin-bottom:1rem;
 }
 
-.hero-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.hero-text p{
+font-size:1.1rem;
+line-height:1.6;
+margin-bottom:1.5rem;
 }
 
-.hero-text p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+.subtitle{
+font-size:1.2rem;
+margin-top:-10px;
+color:#cbd5f5;
+letter-spacing:1px;
 }
 
-/* Download Resume & Contact Me button animations */
-.btn.resume, 
-.btn.contact {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+/* ===============================
+HERO IMAGE
+=============================== */
+
+.hero-img{
+width:450px;
+height:450px;
+object-fit:cover;
+border-radius:50%;
+border:4px solid rgba(255,255,255,0.15);
+box-shadow:0 0 35px rgba(99,102,241,0.5);
 }
 
-/* Hover effect: grow + glow */
+/* ===============================
+BUTTONS
+=============================== */
+
+.hero-buttons{
+display:flex;
+gap:1rem;
+}
+
+.btn{
+padding:0.7rem 1.5rem;
+border-radius:25px;
+text-decoration:none;
+color:white;
+font-weight:500;
+background:linear-gradient(135deg,#6366f1,#4f46e5);
+transition:all 0.3s ease;
+}
+
+.btn:hover{
+background:linear-gradient(135deg,#4f46e5,#4338ca);
+transform:translateY(-2px);
+}
+
+/* button animation */
+
+.btn.resume,
+.btn.contact{
+position:relative;
+overflow:hidden;
+transition:transform 0.2s ease, box-shadow 0.3s ease;
+}
+
 .btn.resume:hover,
-.btn.contact:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+.btn.contact:hover{
+transform:scale(1.07);
+box-shadow:0 0 15px rgba(99,102,241,0.7);
 }
 
-/* Click effect: shrink */
 .btn.resume:active,
-.btn.contact:active {
-  transform: scale(0.95);
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+.btn.contact:active{
+transform:scale(0.95);
 }
 
+/* ===============================
+CONTACT POPUP
+=============================== */
 
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
+.contact-wrapper{
+position:relative;
+display:inline-block;
 }
 
-.btn {
-  padding: 0.7rem 1.5rem;
-  border-radius: 20px;
-  text-decoration: none;
-  color: white;
-  background: #4f46e5;
-  transition: 0.3s;
+.contact-options{
+position:absolute;
+top:55px;
+left:50%;
+transform:translateX(-50%);
+
+display:flex;
+gap:12px;
+
+background:rgba(0,0,0,0.35);
+padding:10px 14px;
+border-radius:12px;
+backdrop-filter:blur(10px);
 }
 
-.btn:hover {
-  background: #4338ca;
+.contact-options.hidden{
+display:none;
 }
 
-.contact-options {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
+.contact-options a{
+background:rgba(255,255,255,0.15);
+padding:10px;
+border-radius:50%;
+color:white;
+font-size:18px;
+transition:0.3s;
 }
 
-.contact-options a {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 0.8rem;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 1.2rem;
-  transition: transform 0.3s, background 0.3s;
+.contact-options a:hover{
+transform:scale(1.2);
+background:rgba(255,255,255,0.35);
 }
 
-.contact-options a:hover {
-  background: rgba(255, 255, 255, 0.4);
-  transform: scale(1.1);
+/* ===============================
+SECTIONS
+=============================== */
+
+.about,
+.skills,
+.projects,
+.certifications{
+padding:2rem 1rem;
+margin-left:1rem;
+font-size:large;
 }
 
+/* ===============================
+GLASS CARDS
+=============================== */
 
-.contact-options.hidden {
-  display: none;
-}
-
-.contact-options a:hover {
-  transform: scale(1.2) rotate(10deg);
-  transition: 0.3s ease;
-}
-
-
-.hero-img {
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-.hero-img {
-  width: 500px;   /* adjust size */
-  height: 500px;  /* keep equal for circle */
-  object-fit: cover; /* ensures the image fills without distortion */
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-
-.about, .skills, .projects {
-  padding: 2rem 1rem;
-  margin-left: 1rem;
-  font-size: large;
-}
-
-.about-box, .skill-card, .project-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
-  border-radius: 15px;
-  margin-top: 1rem;
-}
-
-.skills-grid, .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-/* Animation base */
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in-up.show {
-  opacity: 1;
-  transform: translateY(0);
+.about-box,
+.skill-card,
+.project-card,
+.cert-card{
+background:rgba(255,255,255,0.08);
+padding:1.5rem;
+border-radius:16px;
+margin-top:1rem;
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.1);
+transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-box:hover,
 .skill-card:hover,
-.project-card:hover {
-  animation: pulse 0.4s ease;
+.project-card:hover,
+.cert-card:hover{
+transform:translateY(-6px);
+box-shadow:0 8px 25px rgba(0,0,0,0.3);
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+/* ===============================
+GRID LAYOUT
+=============================== */
+
+.skills-grid,
+.certification-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:1.5rem;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Always 3 projects in one row */
-  gap: 1.5rem;
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:1.5rem;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  opacity: 0.7;
+/* ===============================
+CERTIFICATIONS
+=============================== */
+
+.certifications h3{
+margin-bottom:1rem;
 }
 
-/* =========================
-   CERTIFICATIONS SECTION
-========================= */
-
-.certifications {
-  padding: 2rem 1rem;
-  margin-left: 1rem;
+.cert-card h4{
+margin-bottom:0.5rem;
 }
 
-.certifications h3 {
-  margin-bottom: 1rem;
+.cert-card p{
+opacity:0.85;
+font-size:0.95rem;
 }
 
-/* grid layout */
-.certification-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+.cert-card::before{
+content:"🏆";
+font-size:1.5rem;
+display:block;
+margin-bottom:10px;
 }
 
-/* certification card */
-.cert-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.cert-btn{
+display:inline-block;
+margin-top:0.8rem;
+padding:0.5rem 1rem;
+border-radius:15px;
+text-decoration:none;
+color:white;
+background:#4f46e5;
+transition:0.3s;
 }
 
-/* hover effect */
-.cert-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+.cert-btn:hover{
+  background:#4338ca;
 }
 
-/* certification title */
-.cert-card h4 {
-  margin-bottom: 0.5rem;
+.contact-options{
+  animation:fadeIn 0.3s ease;
 }
 
-/* issuer text */
-.cert-card p {
-  opacity: 0.85;
-  font-size: 0.95rem;
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translate(-50%,10px);
+  }
+  to{
+    opacity:1;
+    transform:translate(-50%,0);
+  }
 }
 
-/* view button */
-.cert-btn {
-  display: inline-block;
-  margin-top: 0.8rem;
-  padding: 0.5rem 1rem;
-  border-radius: 15px;
-  text-decoration: none;
-  color: white;
-  background: #4f46e5;
-  transition: 0.3s;
+/* ===============================
+SCROLL ANIMATION
+=============================== */
+
+.fade-in-up{
+opacity:0;
+transform:translateY(30px);
+transition:opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.cert-btn:hover {
-  background: #4338ca;
+.fade-in-up.show{
+opacity:1;
+transform:translateY(0);
 }
 
-.cert-card::before {
-  content: "🏆";
-  font-size: 1.5rem;
-  display: block;
-  margin-bottom: 10px;
+/* ===============================
+FOOTER
+=============================== */
+
+footer{
+text-align:center;
+padding:1.5rem;
+color:#cbd5f5;
+font-size:0.9rem;
 }
