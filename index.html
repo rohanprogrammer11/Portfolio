@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohan Giri — Developer Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-initials">🧑‍💻</div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+    <div class="loader-text">Loading portfolio...</div>
+  </div>
+
+  <!-- CURSOR -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ASTRONAUT CHARACTER -->
+  <div id="astronaut">🧑‍💻</div>
+
+  <!-- PARTICLES -->
+  <canvas id="particles"></canvas>
+
+  <!-- BLOBS -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Rohan<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#timeline">Journey</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certs</a></li>
+      <li><a href="docs/Rohan_Resume.pdf" class="nav-cta" download>Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="section-wrap">
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">Available for opportunities</div>
+        <h1>Hi, I'm<br><span class="line2">Rohan Giri</span></h1>
+        <div class="typing-line">
+          <span id="typing-text"></span><span class="cursor-blink"></span>
+        </div>
+        <p class="hero-desc">BCA student at Gopal Krishna Gokhale College, Kolhapur. I build backend systems, web tools, and clean UIs using Python, Java, and C++.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary"><i class="fas fa-folder-open"></i> View Projects</a>
+          <a href="docs/Rohan_Resume.pdf" class="btn-ghost" download><i class="fas fa-download"></i> Resume</a>
+        </div>
+        <div class="social-row">
+          <a href="https://github.com/rohanprogrammer11" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/rohan-giri-kop/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:rohangiri050@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-visual">
+      <div class="hero-img-wrap">
+          <div class="hero-img-ring"></div>
+          <img src="images/rohan_photo_JPG.jpeg" alt="Rohan Giri" class="hero-img">
+      </div>
+
+      <div class="hero-float-badge badge-cgpa">
+          ⭐ CGPA 8.26 / 10
+      </div>
+
+      <div class="hero-float-badge badge-proj">
+          🚀 11+ Projects
+      </div>    
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-row stagger section-wrap">
+    <div class="stat-card">
+      <div class="stat-num" data-target="11">0</div>
+      <div class="stat-label">Projects Built</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" data-target="4">0</div>
+      <div class="stat-label">Certifications</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" data-target="826" data-suffix="/10">0</div>
+      <div class="stat-label">CGPA Score</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" data-target="6">0</div>
+      <div class="stat-label">Languages</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section section-wrap">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Who I am</p>
+      <h2 class="section-title">About Me</h2>
+    </div>
+    <div class="about-grid stagger">
+      <div class="about-card">
+        <span class="about-card-icon">🎓</span>
+        <h3>Education</h3>
+        <p>BCA at Gopal Krishna Gokhale College, affiliated with Shivaji University, Kolhapur. Graduating 2026 with CGPA 8.26/10.</p>
+      </div>
+      <div class="about-card">
+        <span class="about-card-icon">💡</span>
+        <h3>What I do</h3>
+        <p>I build backend applications with Python & Flask, console tools in C++ and Java, and clean front-end interfaces with HTML/CSS/JS.</p>
+      </div>
+      <div class="about-card">
+        <span class="about-card-icon">🚀</span>
+        <h3>Currently exploring</h3>
+        <p>FastAPI, REST API design, and AI-assisted tooling. I enjoy solving practical problems, not just building demos.</p>
+      </div>
+      <div class="about-card">
+        <span class="about-card-icon">🌱</span>
+        <h3>Looking for</h3>
+        <p>Entry-level roles as Front-End Developer, Java Developer, or Python Web Developer to contribute and grow professionally.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills-section section-wrap">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">What I work with</p>
+      <h2 class="section-title">Skills</h2>
+    </div>
+    <div class="skills-grid stagger">
+      <div class="skill-group">
+        <div class="skill-group-title">Core Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Java</span><span class="skill-tag">Python</span>
+          <span class="skill-tag">C++</span><span class="skill-tag">C</span>
+          <span class="skill-tag">PHP</span><span class="skill-tag">.NET/C#</span>
+        </div>
+        <div class="skill-bar-list">
+          <div class="skill-bar-item">
+            <div class="skill-bar-header"><span class="skill-bar-name">Python</span><span class="skill-bar-pct">80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header"><span class="skill-bar-name">Java</span><span class="skill-bar-pct">75%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header"><span class="skill-bar-name">C++</span><span class="skill-bar-pct">70%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Frontend</div>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span><span class="skill-tag">Bootstrap</span>
+        </div>
+        <div class="skill-bar-list">
+          <div class="skill-bar-item">
+            <div class="skill-bar-header"><span class="skill-bar-name">HTML/CSS</span><span class="skill-bar-pct">88%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header"><span class="skill-bar-name">JavaScript</span><span class="skill-bar-pct">65%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Backend & DB</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Flask</span><span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">MySQL</span><span class="skill-tag">JDBC</span>
+        </div>
+        <div class="skill-bar-list">
+          <div class="skill-bar-item">
+            <div class="skill-bar-header"><span class="skill-bar-name">Flask</span><span class="skill-bar-pct">78%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header"><span class="skill-bar-name">MySQL</span><span class="skill-bar-pct">72%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="72"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline" class="timeline-section section-wrap">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">My journey</p>
+      <h2 class="section-title">Education & Milestones</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2023</div>
+        <div class="tl-card">
+          <h4>🎓 Started BCA — Gopal Krishna Gokhale College</h4>
+          <p>Began Bachelor of Computer Applications at Shivaji University, Kolhapur. Discovered a passion for programming and problem-solving.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2023</div>
+        <div class="tl-card">
+          <h4>🏅 IBM SkillsBuild — HTML, CSS & Java Certifications</h4>
+          <p>Completed IBM-certified courses in web fundamentals and Java programming, strengthening core technical skills.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2024</div>
+        <div class="tl-card">
+          <h4>🗂️ Built Student Record System in C++</h4>
+          <p>First major project — full CRUD system using binary file I/O. Deepened understanding of OOP and data persistence.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2024</div>
+        <div class="tl-card">
+          <h4>🚌 School Bus Safety & Tracking System — Flask + MySQL</h4>
+          <p>Built a real-world web application with role-based access, backend APIs, and database integration.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2025</div>
+        <div class="tl-card">
+          <h4>🤖 AI Website Audit Tool — FastAPI + Lighthouse</h4>
+          <p>Most advanced project — live deployed on Render. Integrated Google Lighthouse, BeautifulSoup, REST APIs, and automated reporting.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot tl-dot-highlight"></div>
+        <div class="tl-year">2026</div>
+        <div class="tl-card tl-card-highlight">
+          <h4>🎯 Graduating & Seeking First Role</h4>
+          <p>Completing BCA with CGPA 8.26/10. Actively looking for entry-level developer positions in front-end, Java, or Python web development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects-section section-wrap">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">What I've built</p>
+      <h2 class="section-title">Projects</h2>
+    </div>
+    <div class="projects-grid stagger">
+      <div class="project-card featured">
+        <span class="featured-badge">Featured</span>
+        <div class="project-icon">🤖</div>
+        <h4>AI Website Audit Tool</h4>
+        <p>AI-powered web audit platform analysing site quality and performance. Integrates Google Lighthouse for FCP, LCP, Speed Index, TTI, TBT & CLS metrics, plus automated SEO, Accessibility, Security, and UI/UX analysis. Generates comprehensive reports with screenshots. Live on Render.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span><span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">MySQL</span><span class="tech-tag">Lighthouse</span>
+          <span class="tech-tag">BeautifulSoup</span><span class="tech-tag">Bootstrap</span>
+        </div>
+        <div class="project-links">
+          <a href="https://website-audit-tool-t3w9.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="https://github.com/rohanprogrammer11" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🚌</div>
+        <h4>School Bus Safety & Tracking System</h4>
+        <p>Web-based platform enabling schools to manage students, drivers, buses, and routes. Role-based access for parents, drivers, and admins with real-time trip updates.</p>
+        <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">MySQL</span></div>
+        <div class="project-links"><a href="https://github.com/rohanprogrammer11/School-Bus-Tracking-and-Safety-System" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub</a></div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🗂️</div>
+        <h4>Student Record System</h4>
+        <p>C++ console application implementing full CRUD for student records via binary file I/O. Input validation and persistent data across sessions.</p>
+        <div class="project-tech"><span class="tech-tag">C++</span><span class="tech-tag">File I/O</span><span class="tech-tag">OOP</span></div>
+        <div class="project-links"><a href="https://github.com/rohanprogrammer11/Student-Record-System" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub</a></div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">⚡</div>
+        <h4>Advanced Processor Concepts</h4>
+        <p>Responsive educational website covering CPU architecture, memory systems, and processor companies. Includes team pages and feedback section.</p>
+        <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">Responsive</span></div>
+        <div class="project-links">
+          <a href="https://rohanprogrammer11.github.io/Advance-Processor-Concept-mini-project-/" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
+          <a href="https://github.com/rohanprogrammer11/Advance-Processor-Concept-mini-project-" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">❌</div>
+        <h4>Tic-Tac-Toe</h4>
+        <p>Two-player C++ console game with input validation, automatic win/draw detection, and live board display after every move.</p>
+        <div class="project-tech"><span class="tech-tag">C++</span></div>
+        <div class="project-links"><a href="https://github.com/rohanprogrammer11/Tic-Tac-Toe-game" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub</a></div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🎲</div>
+        <h4>Number Guessing Game</h4>
+        <p>C++ guessing game where the computer picks 1–100. Gives "Too High / Too Low" hints and tracks attempts to teach loops and conditionals.</p>
+        <div class="project-tech"><span class="tech-tag">C++</span></div>
+        <div class="project-links"><a href="https://github.com/rohanprogrammer11/Number-Guessing-Game" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i> GitHub</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTS -->
+  <section id="certifications" class="certs-section section-wrap">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Learning never stops</p>
+      <h2 class="section-title">Certifications</h2>
+    </div>
+    <div class="certs-grid stagger">
+      <div class="cert-card"><div class="cert-icon">🏅</div><h4>HTML and CSS</h4><p class="cert-issuer">IBM SkillsBuild</p><a href="certificate/HTML and CSS Certificate.pdf" class="cert-link">View <i class="fas fa-arrow-right"></i></a></div>
+      <div class="cert-card"><div class="cert-icon">☕</div><h4>Java Programming</h4><p class="cert-issuer">IBM SkillsBuild</p><a href="certificate/Java  Certificate.pdf" class="cert-link">View <i class="fas fa-arrow-right"></i></a></div>
+      <div class="cert-card"><div class="cert-icon">📊</div><h4>Advanced Excel VBA</h4><p class="cert-issuer">Udemy</p><a href="certificate/Excel_certificate.pdf" class="cert-link">View <i class="fas fa-arrow-right"></i></a></div>
+      <div class="cert-card"><div class="cert-icon">🧠</div><h4>IBM Design Thinking</h4><p class="cert-issuer">IBM SkillsBuild</p><a href="certificate/IBM and Design Thinking Certificate.pdf" class="cert-link">View <i class="fas fa-arrow-right"></i></a></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section section-wrap">
+    <div class="reveal">
+      <p class="section-eyebrow">Get in touch</p>
+      <h2 class="section-title section-title-spacing">Let's work together</h2>
+      <p class="contact-desc">Open to entry-level roles in front-end, Java, or Python web development. Feel free to reach out anytime.</p>
+      <a href="mailto:rohangiri050@gmail.com" class="contact-email"><i class="fas fa-envelope"></i> rohangiri050@gmail.com</a>
+      <div class="contact-socials">
+        <a href="https://github.com/rohanprogrammer11" target="_blank" rel="noopener noreferrer" class="contact-social-btn"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/rohan-giri-kop/" target="_blank" rel="noopener noreferrer" class="contact-social-btn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer><p>© 2025 Rohan Giri — Built with curiosity and code. 🚀</p></footer>
+
+  <script src="static/js/script.js"></script>
+</body>
+</html>
